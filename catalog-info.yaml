@@ -8,10 +8,17 @@ metadata:
     - example
   annotations:
     backstage.io/techdocs-ref: dir:.
+    # GitHub integration
     github.com/project-slug: iskrentsbg/backstage-test-service
-    github.com/workflow-folder: .github/workflows
-    github.workflows.workflow_id: ci.yml
-    github.workflows.branch: main
+    # GitHub Actions integration
+    github.com/project-slug: iskrentsbg/backstage-test-service
+    backstage.io/source-location: url:https://github.com/iskrentsbg/backstage-test-service/tree/main/
+    # CI/CD integration
+    github.actions/instance: https://github.com
+    github.actions/owner: iskrentsbg
+    github.actions/repo: backstage-test-service
+    github.actions/ref: main
+    github.actions/workflow-name: CI/CD Pipeline
   links:
     - url: https://github.com/iskrentsbg/backstage-test-service
       title: 'Source Code'
