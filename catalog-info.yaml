@@ -7,18 +7,20 @@ metadata:
     - test
     - example
   annotations:
+    # Core annotations
     backstage.io/techdocs-ref: dir:.
+    backstage.io/source-location: url:https://github.com/iskrentsbg/backstage-test-service/tree/main/
+    
     # GitHub integration
     github.com/project-slug: iskrentsbg/backstage-test-service
+    
     # GitHub Actions integration
-    github.com/project-slug: iskrentsbg/backstage-test-service
-    backstage.io/source-location: url:https://github.com/iskrentsbg/backstage-test-service/tree/main/
+    github.com/project-owner: iskrentsbg
+    github.com/repository: backstage-test-service
+    
     # CI/CD integration
-    github.actions/instance: https://github.com
-    github.actions/owner: iskrentsbg
-    github.actions/repo: backstage-test-service
-    github.actions/ref: main
-    github.actions/workflow-name: CI/CD Pipeline
+    github.com/workflows: .github/workflows/ci.yml
+    github.com/branch: main
   links:
     - url: https://github.com/iskrentsbg/backstage-test-service
       title: 'Source Code'
