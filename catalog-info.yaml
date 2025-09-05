@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-service
+  description: A test service for Backstage integration
+  tags:
+    - test
+    - example
+  links:
+    - url: https://github.com/yourusername/backstage-test-service
+      title: 'Source Code'
+      icon: github
+
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default/team-a
