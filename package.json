@@ -1,0 +1,21 @@
+{
+  "name": "backstage-test-service",
+  "version": "1.0.0",
+  "description": "Test service for Backstage integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "testResultsProcessor": "jest-junit",
+    "collectCoverage": true,
+    "coverageReporters": ["lcov", "text-summary"]
+  }
+}
