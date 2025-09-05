@@ -11,7 +11,7 @@ metadata:
     github.com/project-slug: iskrentsbg/backstage-test-service
     github.com/workflow-id: ci.yml
   links:
-    - url: https://github.com/yourusername/backstage-test-service
+    - url: https://github.com/iskrentsbg/backstage-test-service
       title: 'Source Code'
       icon: github
 
