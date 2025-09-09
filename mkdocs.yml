@@ -1,0 +1,20 @@
+site_name: 'Backstage Test Service'
+site_description: 'Documentation for the Backstage Test Service'
+
+nav:
+  - Home: index.md
+  - API Reference: api.md
+  - Deployment Guide: deployment.md
+  - Development: development.md
+
+plugins:
+  - techdocs-core
+
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: teal
+  features:
+    - navigation.tabs
+    - navigation.top
