@@ -7,24 +7,19 @@ metadata:
     - test
     - example
   annotations:
-    # Core annotations
     backstage.io/techdocs-ref: dir:.
-    backstage.io/source-location: url:https://github.com/iskrentsbg/backstage-test-service/tree/main/
-    
-    # GitHub integration
     github.com/project-slug: iskrentsbg/backstage-test-service
-    
-    # GitHub Actions integration
-    github.com/project-owner: iskrentsbg
-    github.com/repository: backstage-test-service
-    
-    # CI/CD integration
-    github.com/workflows: .github/workflows/ci.yml
-    github.com/branch: main
+    github.com/workflow-id: ci.yml
+    # Container image annotations
+    backstage.io/docker-image-name: iskrents/backstage-test-service
+    backstage.io/docker-image-tag: latest
   links:
     - url: https://github.com/iskrentsbg/backstage-test-service
       title: 'Source Code'
       icon: github
+    - url: https://hub.docker.com/r/iskrents/backstage-test-service
+      title: 'Docker Hub'
+      icon: docker
 
 spec:
   type: service
