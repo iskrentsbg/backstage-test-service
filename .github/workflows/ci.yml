@@ -1,29 +1,47 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # Allows manual triggering from the GitHub UI and Backstage
+  workflow_dispatch:
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Node.js
+    - name: Use Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18.x
-        cache: 'yarn'
+        node-version: '18'
+        cache: 'npm'
     
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      run: npm ci
     
     - name: Run tests
-      run: yarn test
+      run: npm test
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    
+    - name: Run Playwright tests
+      run: npm run test:e2e
+    
+    - name: Upload Playwright Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+    
+    - name: Build application
+      run: npm run build --if-present
     
     # This step will be used by Backstage to show CI status
     - name: Update CI status in Backstage

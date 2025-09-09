@@ -20,6 +20,9 @@ metadata:
     - url: https://hub.docker.com/r/iskrents/backstage-test-service
       title: 'Docker Hub'
       icon: docker
+    - url: https://iskrentsbg.github.io/backstage-test-service/
+      title: 'Test Reports'
+      icon: dashboard
 
 spec:
   type: service
